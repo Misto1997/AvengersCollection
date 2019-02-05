@@ -1,0 +1,82 @@
+#headerWrapper {
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    padding: 10px;
+    font-size: 35px;
+    font-family: fantasy;
+    color: red;
+}
+
+.tagline {
+    font-size: 13px;
+    margin-top: 50px;
+    margin-left: -293px;
+    font-family: comic sans ms;
+    color: blue;
+}
+
+.nav-wrapper {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+#ListWrapper {
+	width: 100%;
+	padding: 10px;
+}
+
+#ListWrapper input {
+	width: 25%;
+}
+
+#ListWrapper .avg {
+	border: 2px solid lightgreen;
+	padding: 10px;
+	margin-bottom: 10px;
+        position: relative;
+}
+
+#ListWrapper .avg .avg-details {
+	margin-left: 160px;
+}
+.container.ng-enter {
+	-webkit-transition:0.5s linear all;
+	 -moz-transition:0.5s linear all;
+	 -o-transition:0.5s linear all;
+	 transition:0.5s linear all;
+	 opacity:0;
+}
+
+.container.ng-enter-active {
+	 opacity:1;
+}
+
+.avg.ng-leave {
+	-webkit-transition:0.5s linear all;
+	 -moz-transition:0.5s linear all;
+	 -o-transition:0.5s linear all;
+	 transition:0.5s linear all;
+	 opacity:1;
+	 left: 0;
+}
+
+.avg.ng-leave-active {
+	opacity:0;
+	left: 600px;
+}
+
+.avg.ng-enter {
+	-webkit-transition:0.5s linear all;
+	 -moz-transition:0.5s linear all;
+	 -o-transition:0.5s linear all;
+	 transition:0.5s linear all;
+	 opacity:0;
+	 left: 600px;
+}
+
+.avg.ng-enter-active {
+	opacity:1;
+	left: 0;
+}

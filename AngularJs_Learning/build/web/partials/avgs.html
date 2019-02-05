@@ -1,0 +1,22 @@
+<div id="ListWrapper"> <!--control to add book list  -->
+			<form role="form">
+			  <div class="form-group">
+                              <input type="text"   class="form-control" placeholder="Search item here...(name,rating etc)" ng-model="search">
+			  </div>
+			</form>
+			 
+			<ul class="list-unstyled">
+				<li class="avg" ng-repeat="avg in store | filter:search ">  <!-- ng-repeat directive to repeat book in books array  and generic filter to search data  via ng-model name-->
+					 <img src="pics/{{avg.imgUrl}}" style="width :150px;height: 200px;float:left">
+                                    <div class="avg-details clearfix">
+                                           
+						<h2>Name:{{avg.name}}</h2>
+						<p>Price:{{avg.price | currency}}</p> <!--to apply filter we need to use | symbol first -->				
+					        <p>Rating: {{avg.rating}}</p>							
+										
+						<button class="btn btn-info pull-right" ng-click="addToKart(avg)">Add to Kart</button>
+					</div>
+				</li>
+			</ul>
+		 
+        </div>

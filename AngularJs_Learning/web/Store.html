@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" ng-app="myApp"> <!-- to connect module to html we simple write  ng-app="myApp" -->
+    <head>
+        <title>Store</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+         <link rel="stylesheet" href="Store.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.min.js"></script>
+         <script src="Store.js"></script>
+    </head>
+    <body style="background-color:lightyellow">
+        <div id="headerWrapper" ng-controller="HeaderCtrl"> <!-- creating headerCtrl object for controller which redirect to headerCtrl constructor in js file -->
+            <span class="logo pull-left">{{appDetails.ti}}</span> <!-- values coming from scope object -->
+            <span class="tagline pull-left">{{appDetails.tagline}}</span>
+            <div class="nav-wrapper pull-left">
+                <ul class="nav nav-pills">
+                    <li ng-class="{active: nav.isActive('/avg')}"><a href="#/avg">Collection</a></li>  <!--  #/avg is our link to avgs.html file that we give in Store.js file -->
+                    <li ng-class="{active: nav.isActive('/kart')}"><a href="#/kart">Kart</a></li>
+                </ul>
+            </div>
+        </div>
+        <div ng-view class="container"></div> <!-- ng-view used to get our dynamic pages here , we are creating SPA (single page application)-->
+        
+        
+        
+         
+    </body>
+</html>

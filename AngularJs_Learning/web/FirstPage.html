@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<!-- AngularJs is MVC Base framework-->
+<html lang="en" ng-app> <!-- it is a directive,it initializes  our app and used to make html page as AngularJs application -->
+    <head>
+        <title>Angular</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> <!--used to import angular libraries and many more other features of angular-->
+    </head>
+    <body ng-init="nob=10"><!-- used to initialize the object in the current scope i.e rootscope -->
+        Number of books:<input ng-model="nob"/><!-- it also creates property in the current scope if not available then creates new and if available the use that value. in this case it is already created by ng-init -->
+        <p>Welcome to Store, we have {{nob + ' thousand '}}book in our store</p>
+        
+        <!-- MVC is a design pattern used in client and server side 
+             M(model) responsible for storing data
+             V(view) responsible for presentation of data
+             C(controller)responsible for action taken by user and handles it -->
+        
+    </body>
+</html>

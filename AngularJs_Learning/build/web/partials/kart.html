@@ -1,0 +1,17 @@
+<div id="ListWrapper"> <!--control to add book list  -->
+    <p style="font-size: 20px;color:darkslateblue;margin-left: 400px;font-family: italic">Add items and click on buy button to buy items</p>   
+			<ul class="list-unstyled">
+				<li class="avg" ng-repeat="avg in kart">  <!-- ng-repeat directive to repeat book in books array -->
+					 <img src="pics/{{avg.imgUrl}}" style="width :150px;height: 200px;float:left">
+                                    <div class="avg-details clearfix">
+                                           
+						<h2>Name:{{avg.name}}</h2>
+						<p>Price:{{avg.price | currency}}</p>					
+					        <p>Rating: {{avg.rating}}</p>							
+										
+						<button class="btn btn-info pull-right" ng-click="buy(avg)">buy</button>
+					</div>
+				</li>
+			</ul>
+		 
+        </div>
